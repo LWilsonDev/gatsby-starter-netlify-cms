@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-title: Test Site
+title: Helloo
 image: /img/blog-index.jpg
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
