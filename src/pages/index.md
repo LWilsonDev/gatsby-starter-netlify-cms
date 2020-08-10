@@ -20,8 +20,8 @@ imageGroup:
     alt: A radio producer in his studio
     image: /img/tom-pottiger-yxzl9lnxsna-unsplash.jpg
   image2:
-    alt: A close up of a radio producer's hand on a mixing deck
-    image: /img/drew-patrick-miller-_o6aax9dl_y-unsplash.jpg
+    alt: A light feature with a musical message
+    image: /img/mohammad-metri-1okxsksoowe-unsplash.jpg
   image3:
     alt: A group of jazz instruments in a studio setting
     image: /img/dolo-iglesias-z9z6u1rn7sy-unsplash.jpg
