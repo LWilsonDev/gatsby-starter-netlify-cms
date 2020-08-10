@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Podcast
+title: Podcast Episode 18
 date: 2020-08-10T17:37:47.583Z
 description: Latest episode of the Music Teacher's Association Podcast. This
   month, Patrick interviews Catherine Barker and the Executive Director of
