@@ -30,6 +30,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
             alt: entry.getIn(['data', 'imageGroup', 'image3', 'alt']),
           },
         }}
+        content={widgetFor('body')}
       />
     )
   } else {
