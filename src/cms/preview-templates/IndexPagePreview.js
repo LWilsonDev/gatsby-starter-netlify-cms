@@ -12,9 +12,21 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         title={data.title}
         heading={data.heading}
         subheading={data.subheading}
-        description={data.description}
-        intro={data.intro || { blurbs: [] }}
         mainpitch={data.mainpitch || {}}
+        imageGroup={{
+          image1: {
+            image: getAsset(entry.getIn(['data', 'imageGroup', 'image1', 'image'])),
+            alt: entry.getIn(['data', 'imageGroup', 'image1', 'alt']),
+          },
+          image2: {
+            image: getAsset(entry.getIn(['data', 'imageGroup', 'image2', 'image'])),
+            alt: entry.getIn(['data', 'imageGroup', 'image2', 'alt']),
+          },
+          image3: {
+            image: getAsset(entry.getIn(['data', 'imageGroup', 'image3', 'image'])),
+            alt: entry.getIn(['data', 'imageGroup', 'image3', 'alt']),
+          },
+        }}
       />
     )
   } else {

@@ -83,7 +83,7 @@ export const IndexPageTemplate = props => {
 
                 <Testimonials testimonials={page.frontmatter.testimonials} />
 
-                <div className="tile is-ancestor">
+                <div className="tile is-ancestor pt-6">
                 <div className="tile is-vertical">
                   <div className="tile">
                     <div className="tile is-parent is-vertical">
@@ -108,12 +108,12 @@ export const IndexPageTemplate = props => {
 
                 <div className="is-12 pl-0 pr-0 pt-6">
                   <h3 className="has-text-weight-semibold has-text-white is-size-2">
-                    Latest stories
+                    Latest Projects
                   </h3>
                   <BlogRoll />
                   <div className="is-12 has-text-centered">
                     <Link className="button is-link" to="/blog">
-                      Read more
+                      View All Projects
                     </Link>
                   </div>
                 </div>

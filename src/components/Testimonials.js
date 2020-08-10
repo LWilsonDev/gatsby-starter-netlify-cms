@@ -5,7 +5,7 @@ import { FaQuoteLeft } from 'react-icons/fa';
 
 
 const Testimonials = ({ testimonials }) => (
-  <div className="content" >
+  <div className="content pt-6" >
     {testimonials.map(testimonial => (
       <div class="box has-background-link-light">
         <article key={v4()} className="media">
