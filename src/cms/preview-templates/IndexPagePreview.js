@@ -4,6 +4,8 @@ import { IndexPageTemplate } from '../../templates/index-page'
 
 const IndexPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(['data']).toJS()
+  const entryTestimonials = entry.getIn(['data', 'testimonials'])
+  const testimonials = entryTestimonials ? entryTestimonials.toJS() : []
 
   if (data) {
     return (
@@ -13,6 +15,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         heading={data.heading}
         subheading={data.subheading}
         mainpitch={data.mainpitch || {}}
+        testimonials={testimonials}
         imageGroup={{
           image1: {
             image: getAsset(entry.getIn(['data', 'imageGroup', 'image1', 'image'])),
