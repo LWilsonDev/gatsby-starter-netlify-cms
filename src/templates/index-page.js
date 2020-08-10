@@ -7,6 +7,10 @@ import Helmet from "react-helmet";
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+
+
+import Testimonials from '../components/Testimonials'
 
 export const IndexPageTemplate = props => {
   const { page } = props;
@@ -64,39 +68,51 @@ export const IndexPageTemplate = props => {
     </div>
     <section className="section section--gradient">
       <div className="container">
-        <div className="section">
+        <div className="pt-6">
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <div className="content">
                 <div className="content">
-                  <div className="">
-                    <h3 className="has-text-weight-semibold is-size-2">{page.frontmatter.mainpitch.title}</h3>
+                  <div className="has-text-white">
+                    <h3 className="has-text-weight-semibold is-size-2 has-text-white">{page.frontmatter.mainpitch.title}</h3>
                   </div>
-
-                <main>
-                    <div  dangerouslySetInnerHTML={{ __html: page.html }}>
-
+                    <div className="content" dangerouslySetInnerHTML={{ __html: page.html }}>
                     </div>
-                    </main>
-
-
                 </div>
 
 
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
-                    </Link>
+                <Testimonials testimonials={page.frontmatter.testimonials} />
+
+                <div className="tile is-ancestor">
+                <div className="tile is-vertical">
+                  <div className="tile">
+                    <div className="tile is-parent is-vertical">
+                      <article className="tile is-child">
+                        <PreviewCompatibleImage imageInfo={page.frontmatter.imageGroup.image1} />
+                      </article>
+                    </div>
+                    <div className="tile is-parent">
+                      <article className="tile is-child">
+                        <PreviewCompatibleImage imageInfo={page.frontmatter.imageGroup.image2} />
+                      </article>
+                    </div>
+                  </div>
+                  <div className="tile is-parent">
+                    <article className="tile is-child">
+                      <PreviewCompatibleImage imageInfo={page.frontmatter.imageGroup.image3} />
+                    </article>
                   </div>
                 </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
+              </div>
+
+
+                <div className="is-12 pl-0 pr-0 pt-6">
+                  <h3 className="has-text-weight-semibold has-text-white is-size-2">
                     Latest stories
                   </h3>
                   <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
+                  <div className="is-12 has-text-centered">
+                    <Link className="button is-link" to="/blog">
                       Read more
                     </Link>
                   </div>
@@ -115,6 +131,7 @@ export const IndexPageTemplate = props => {
 
 IndexPageTemplate.propTypes = {
   //image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  //testimonials: PropTypes.array,
 
 
 
@@ -164,6 +181,43 @@ export const pageQuery = graphql`
             subheading
             mainpitch {
               title
+            }
+            testimonials {
+              author
+              quote
+              article
+            }
+            imageGroup {
+              image1 {
+                alt
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 526, quality: 92) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+              }
+              image2 {
+                alt
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 526, quality: 92) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+              }
+              image3 {
+                alt
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 1075, quality: 72) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+              }
             }
           }
           html

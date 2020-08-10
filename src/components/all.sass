@@ -4,30 +4,34 @@
 // Kaldi logo brand color: #335367b8
 $kaldi-red: #335367b8
 $font-color: white
+$scheme-main: #112121
 
-$primary: $kaldi-red
-$primary-invert: $font-color
+$text-strong: white
+
+
+$navbar-background-color: #112121
+$navbar-item-color: white
+$navbar-item-hover-color:  #112121
+$navbar-item-hover-background-color: white
+
+
 $body-color: white
+$strong-color: white
 $black: #2b2523
 
-h1, h2, h3, h4, h5, h6
-  color: $font-color !important
-
-.navbar .navbar-menu
-  box-shadow:none !important
-  background-color: #112121
 
 
-.navbar
-  background-color: #112121 !important
+#nav-toggle-state
+  display: none
 
-.navbar-item
-  color: white !important
-
-.navbar-item:hover
-    color: #112121 !important
+#nav-toggle-state:checked ~ .navbar-menu
+  display: block
 
 body
+  background-color: #293c4b
+
+
+footer
   background-color: #293c4b
   color: white
 
@@ -94,14 +98,6 @@ footer.footer
   padding: 3rem 0rem 0rem
   background-color: #112121
 
-//Menu overrides
-$menu-item-color: white
-$menu-item-hover-color: $black !important
-$menu-item-hover-background-color: $black
-$menu-item-active-color: $font-color
-$menu-item-active-background-color:	$font-color
-$menu-list-border-left: 1px solid $font-color
-$menu-label-color: $white-ter
 
 
 .menu-label
@@ -148,3 +144,8 @@ $menu-label-color: $white-ter
     text-align: center;
     max-width: 70%;
     margin: 0 0 1em;
+  .is-paddingless-horizontal
+    padding-left: 0;
+    padding-right: 0;
+  .is-paddingless-top
+    padding-top: 0;

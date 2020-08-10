@@ -40,6 +40,21 @@ const Navbar = class extends React.Component {
         aria-label="main-navigation"
       >
         <div className="container">
+          <div>
+        <label
+              role="button"
+              className="navbar-burger burger"
+              aria-label="menu"
+              aria-expanded="false"
+              htmlFor="nav-toggle-state"
+            >
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+            </label>
+          </div>
+          <input type="checkbox" id="nav-toggle-state" ></input>
+
           <div
             id="navMenu"
             className={`navbar-menu ${this.state.navBarActiveClass}`}
@@ -60,6 +75,7 @@ const Navbar = class extends React.Component {
               <Link className="navbar-item" to="/contact">
                 Contact
               </Link>
+
             </div>
           </div>
         </div>

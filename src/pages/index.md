@@ -6,7 +6,28 @@ heading: Great coffee with a conscience
 subheading: Producer - Presenter - Writer
 mainpitch:
   title: About Patrick
-  
+testimonials:
+  - author: Elisabeth Kaurismäki
+    quote: >-
+      The first time I tried Kaldi’s coffee, I couldn’t even believe that was
+      the same thing I’ve been drinking every morning.
+    article: >-
+      BBC News
+  - author: Evan Smith
+    quote: >-
+      Great gift shop
+    article: >-
+      Gardener's World
+imageGroup:
+  image1:
+    alt: A close-up of a paper filter filled with ground coffee
+    image: /img/products-grid3.jpg
+  image2:
+    alt: A green cup of a coffee on a wooden table
+    image: /img/products-grid2.jpg
+  image3:
+    alt: Coffee beans
+    image: /img/products-grid1.jpg
 ---
 Patrick Johns is a much in-demand freelancer, with a hugely varied portfolio. This ranges from producing hit radio shows for BBC Radio, presenting live reports for ABC Radio (Australia), to performing across the globe, writing numerous arrangements, plus writing and starring in a 5* sell-out comedy show for the Edinburgh Fringe.
 
