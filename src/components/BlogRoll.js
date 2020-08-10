@@ -37,16 +37,13 @@ class BlogRoll extends React.Component {
                       {post.frontmatter.title}
                     </Link>
                     <span> &bull; </span>
-                    <span className="subtitle has-text-black is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
                   </p>
                 </header>
                 <p className="has-text-black">
                   {post.excerpt}
                   <br />
                   <br />
-                  <Link className="button is-link is-outlined" to={post.fields.slug}>
+                  <Link className="button is-info is-outlined" to={post.fields.slug}>
                     Keep Reading →
                   </Link>
                 </p>

@@ -108,7 +108,7 @@ export const IndexPageTemplate = props => {
 
                 <div className="is-12 pl-0 pr-0 pt-6">
                   <h3 className="has-text-weight-semibold has-text-white is-size-2">
-                    Latest Projects
+                    Featured Projects
                   </h3>
                   <BlogRoll />
                   <div className="is-12 has-text-centered">

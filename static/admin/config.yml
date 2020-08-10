@@ -13,10 +13,10 @@ public_folder: /img
 
 collections:
   - name: "blog"
-    label: "Blog"
-    folder: "src/pages/blog"
+    label: "Projects"
+    folder: "src/pages/projects"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
@@ -26,7 +26,6 @@ collections:
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
-      - {label: "File", name: "file", widget: "file"}
 
   - name: "pages"
     label: "Pages"
