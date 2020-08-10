@@ -112,7 +112,7 @@ export const IndexPageTemplate = props => {
                   </h3>
                   <BlogRoll />
                   <div className="is-12 has-text-centered">
-                    <Link className="button is-link" to="/blog">
+                    <Link className="button is-info" to="/blog">
                       View All Projects
                     </Link>
                   </div>
