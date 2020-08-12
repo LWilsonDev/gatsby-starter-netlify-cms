@@ -5,11 +5,9 @@ date: 2020-08-10T17:37:47.583Z
 description: Latest episode of the Music Teacher's Association Podcast. This
   month, Patrick interviews Catherine Barker and the Executive Director of
   London Music Masters,Rob Adediran
-featuredpost: true
+featuredpost: false
 featuredimage: /img/musicteachersassociationlogo175.jpg
 tags:
-  - Podcast
-  - Education
   - Producer
   - Presenter
 ---
