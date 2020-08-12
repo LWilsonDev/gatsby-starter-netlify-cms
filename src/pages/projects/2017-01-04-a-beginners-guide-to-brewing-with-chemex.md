@@ -1,14 +1,13 @@
 ---
 templateKey: blog-post
-title: Composition and Arrangement
+title: Latest Choral Composition Published in SingUp
 date: 2017-01-04T15:04:10.000Z
 description: Patrick has several compositions published, and is a prolific
   arranger of music for choirs, jazz bands and brass ensembles.
 featuredpost: true
 featuredimage: /img/download.png
 tags:
-  - composition
-  - arrangement
+  - Composition
 file: /img/geert-pieters-8qrpj3kfie4-unsplash.jpg
 ---
 ![piano](/img/geert-pieters-8qrpj3kfie4-unsplash.jpg)
