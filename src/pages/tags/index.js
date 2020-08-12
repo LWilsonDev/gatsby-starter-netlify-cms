@@ -3,6 +3,7 @@ import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/Layout'
+import BlogRoll from '../../components/BlogRoll'
 
 const TagsPage = ({
   data: {
@@ -13,25 +14,47 @@ const TagsPage = ({
   },
 }) => (
   <Layout>
+    <div
+      className="full-width-image-container full-width-image margin-top-0"
+      style={{
+        backgroundImage: `url('/img/headphones.jpg')`,
+        backgroundPosition: `center`,
+      }}
+    >
+      <h1
+        className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+        style={{
+          boxShadow:
+          '#335367b8 0.5rem 0px 0px, #335367b8 -0.5rem 0px 0px',
+          backgroundColor: '#335367b8',
+          color: 'white',
+          lineHeight: '1',
+          textAlign: 'center',
+          padding: '0.25em',
+        }}
+      >
+        All Projects
+      </h1>
+    </div>
     <section className="section">
       <Helmet title={`Tags | ${title}`} />
       <div className="container content">
-        <div className="columns">
-          <div
-            className="column is-10 is-offset-1"
-            style={{ marginBottom: '6rem' }}
-          >
-            <h1 className="title is-size-2 is-bold-light">Tags</h1>
-            <ul className="taglist">
-              {group.map(tag => (
-                <li key={tag.fieldValue}>
-                  <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                    {tag.fieldValue} ({tag.totalCount})
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <h2 className="is-size-4 is-bold-light">Filter By Tag</h2>
+        <div className="buttons">
+
+          <ul className="taglist ">
+            {group.map(tag => (
+
+            <li key={tag.fieldValue}>
+              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                <button className="button is-info">{tag.fieldValue} ({tag.totalCount})</button>
+              </Link>
+            </li>
+          ))}
+          </ul>
+        </div>
+        <div className="content">
+          <BlogRoll />
         </div>
       </div>
     </section>

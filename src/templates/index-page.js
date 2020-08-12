@@ -1,11 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-import HTMLContent from "../components/Content";
-import ReactMarkdown from "react-markdown";
-import Helmet from "react-helmet";
 import Layout from '../components/Layout'
-import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
@@ -22,8 +18,7 @@ export const IndexPageTemplate = props => {
         backgroundImage: `url(${
           !!page.frontmatter.image.childImageSharp ? page.frontmatter.image.childImageSharp.fluid.src : page.frontmatter.image
         })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
+        backgroundPosition: `center left`,
       }}
     >
       <div
@@ -112,7 +107,7 @@ export const IndexPageTemplate = props => {
                   </h3>
                   <BlogRoll />
                   <div className="is-12 has-text-centered">
-                    <Link className="button is-info" to="/blog">
+                    <Link className="button is-info" to="/projects">
                       View All Projects
                     </Link>
                   </div>
@@ -140,11 +135,11 @@ IndexPageTemplate.propTypes = {
 const IndexPage = ({ data }) => {
   //const { frontmatter } = data.markdownRemark
   const { markdownRemark: page } = data;
-  const {
-    frontmatter: {
+  // const {
+  //   frontmatter: {
 
-    },
-  } = page;
+  //   },
+  // } = page;
 
   return (
     <Layout>

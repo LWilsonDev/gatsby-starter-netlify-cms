@@ -43,11 +43,11 @@ class BlogRoll extends React.Component {
                   </p>
                 </header>
                 <p className="has-text-black">
-                  {post.excerpt}
+                  {post.frontmatter.description}
                   <br />
                   <br />
                   <Link className="button is-info is-outlined" to={post.fields.slug}>
-                    Keep Reading →
+                    More Info →
                   </Link>
                 </p>
               </article>
@@ -85,6 +85,7 @@ export default () => (
                 title
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
+                description
                 featuredpost
                 featuredimage {
                   childImageSharp {

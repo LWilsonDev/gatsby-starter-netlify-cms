@@ -68,14 +68,18 @@ footer
   justify-content: center
   align-items: center
 
+.is-paddingless-horizontal
+  padding-left: 0 !important
+  padding-right: 0 !important
+
 .full-width-image
     width: 100vw
-    height: 400px
+    height: 500px
     background-size: cover
-    background-position: bottom
     display: flex
     justify-content: center
     align-items: center
+    background-attachment: fixed
 
 .btn
     display: inline-block
@@ -142,6 +146,10 @@ footer.footer
     flex-basis: 50%;
 
 +mobile
+  .full-width-image
+    position:relative
+    background-attachment: unset;
+    height: 300px;
   .blog-list-item header
     display: block
   .blog-list-item .featured-thumbnail
