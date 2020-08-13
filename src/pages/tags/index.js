@@ -37,7 +37,7 @@ const TagsPage = ({
       </h1>
     </div>
     <section className="section">
-      <Helmet title={`Tags | ${title}`} />
+      <Helmet title="Projects" />
       <div className="container content">
         <h2 className="is-size-4 is-bold-light">Filter By Tag</h2>
         <div className="buttons">

@@ -6,7 +6,7 @@ description: Highlight from Patrick's arrangement of 20 Elvis Presley songs for
   full symphony orchestra. these were performed live with the world’s no.1 Elvis
   tribute, Gordon Hendricks.
 featuredpost: true
-featuredimage: /img/elvis.jpg
+featuredimage: /img/elvis-presley.jpg
 tags:
   - Arrangement
 ---

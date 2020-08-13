@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import BlogRoll from '../components/BlogRoll'
+import FeaturedBlogRoll from '../components/FeaturedBlogRoll'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 
@@ -61,7 +61,7 @@ export const IndexPageTemplate = props => {
         </h3>
       </div>
     </div>
-    <section className="section section--gradient">
+    <section className="section section--gradient pb-6">
       <div className="container">
         <div className="pt-6">
           <div className="columns">
@@ -101,14 +101,14 @@ export const IndexPageTemplate = props => {
               </div>
 
 
-                <div className="is-12 pl-0 pr-0 pt-6">
+                <div className="is-12 pl-0 pr-0 pt-6 pb-6">
                   <h3 className="has-text-weight-semibold has-text-white is-size-2">
-                    Featured Projects
+                    Latest Projects
                   </h3>
-                  <BlogRoll />
-                  <div className="is-12 has-text-centered">
-                    <Link className="button is-info" to="/projects">
-                      View All Projects
+                  <FeaturedBlogRoll />
+                  <div className="is-12 has-text-centered pt-4">
+                    <Link className="button is-info is-large" to="/tags">
+                      More Projects →
                     </Link>
                   </div>
                 </div>

@@ -4,13 +4,13 @@ import { kebabCase } from 'lodash'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
-class BlogRoll extends React.Component {
+class FeaturedBlogRoll extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline ">
+      <div className="columns is-multiline">
         {posts &&
           posts.map(({ node: post }) => (
 
@@ -56,11 +56,11 @@ class BlogRoll extends React.Component {
                     <p>Tags:
                     {post.frontmatter.tags.map(tag => (
 
-                      <Link key={tag + `tag`} to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    ))}
+                      <Link key={tag + `tag`} to={`/tags/${kebabCase(tag)}/`}> {tag} </Link>
+                  ))}
                     </p>
                   </div>
-                ) : null}
+            ) : null}
 
               </article>
             </div>
@@ -70,7 +70,7 @@ class BlogRoll extends React.Component {
   }
 }
 
-BlogRoll.propTypes = {
+FeaturedBlogRoll.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
@@ -81,10 +81,10 @@ BlogRoll.propTypes = {
 export default () => (
   <StaticQuery
     query={graphql`
-      query BlogRollQuery {
+      query FeaturedBlogRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "blog-post" }} }
+          filter: { frontmatter: { templateKey: { eq: "blog-post" }, featuredpost: {eq: true}} }
         ) {
           edges {
             node {
@@ -113,6 +113,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <BlogRoll data={data} count={count} />}
+    render={(data, count) => <FeaturedBlogRoll data={data} count={count} />}
   />
 )

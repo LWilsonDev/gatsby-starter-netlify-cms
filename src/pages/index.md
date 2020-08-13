@@ -8,13 +8,12 @@ mainpitch:
   title: About Patrick
   description: Test
 testimonials:
-  - author: Elisabeth Kaurismäki
-    quote: The first time I tried Kaldi’s coffee, I couldn’t even believe that was
-      the same thing I’ve been drinking every morning.
+  - author: Socky McGhee
+    quote: All I can say is, the show is alright... but I wouldn't want to hear it every day. I mean, if there was nothing better to do then I guess it's fine
     article: BBC News
   - author: Evan Smith
-    quote: Great gift shop
-    article: Gardener's World
+    quote: 5 stars - Comedy Genius!
+    article: Edinburgh News
 imageGroup:
   image1:
     alt: A radio producer in his studio

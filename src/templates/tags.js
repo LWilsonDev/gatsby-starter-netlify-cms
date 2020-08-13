@@ -9,13 +9,13 @@ class TagRoute extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
-    const postLinks = posts.map(post => (
-      <div className="columns is-multiline">
-        {posts &&
-          posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
+    const postLinks = posts.map(({ node: post }) => (
+
+
+
+            <div className="column is-half" key={post.id}>
               <article
-                className={`blog-list-item tile is-child box notification ${
+                className={`blog-list-item box notification ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
                 }`}
               >
@@ -30,6 +30,7 @@ class TagRoute extends React.Component {
                       />
                     </div>
                   ) : null}
+                  <div className="">
                   <p className="post-meta">
                     <Link
                       className="title is-size-4"
@@ -42,7 +43,7 @@ class TagRoute extends React.Component {
                       {post.frontmatter.date}
                     </span>
                   </p>
-                </header>
+
                 <p className="has-text-black">
                   {post.frontmatter.description}
                   <br />
@@ -51,10 +52,12 @@ class TagRoute extends React.Component {
                     View Project →
                   </Link>
                 </p>
+                </div>
+                </header>
               </article>
             </div>
-          ))}
-      </div>
+
+
       // <li key={post.node.fields.slug}>
       //   <Link to={post.node.fields.slug}>
       //     <h2 className="is-size-2">{post.node.frontmatter.title}</h2>
@@ -73,15 +76,17 @@ class TagRoute extends React.Component {
         <section className="section">
           <Helmet title={`${tag} | ${title}`} />
           <div className="container content">
-            <div className="columns">
+            <div className="">
               <div
-                className="column is-10 is-offset-1"
+                className="content"
                 style={{ marginBottom: '6rem' }}
               >
                 <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3>
-                <ul className="taglist">{postLinks}</ul>
-                <p>
-                  <Link to="/tags/"><button className="button is-info">Back to Projects</button></Link>
+                <div className="columns is-multiline">
+                <div className="taglist">{postLinks}</div>
+                </div>
+                <p className="pt-6">
+                  <Link to="/tags/"><button className="button is-info">← Back to Projects</button></Link>
                 </p>
               </div>
             </div>

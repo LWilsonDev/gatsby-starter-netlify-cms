@@ -34,7 +34,7 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
-        className="navbar"
+        className="navbar is-fixed-top"
         role="navigation"
         aria-label="main-navigation"
       >
@@ -42,7 +42,7 @@ const Navbar = class extends React.Component {
           <div>
         <label
               role="button"
-              className="navbar-burger burger"
+              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
               aria-label="menu"
               aria-expanded="false"
               htmlFor="nav-toggle-state"
@@ -59,19 +59,13 @@ const Navbar = class extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-start has-text-centered">
-            <Link className="navbar-item" to="/">
+            <Link activeClassName="is-active" className="navbar-item" to="/">
                 Home
               </Link>
-              <Link className="navbar-item" to="/about">
-                About
-              </Link>
-              <Link className="navbar-item" to="/products">
-                Products
-              </Link>
-              <Link className="navbar-item" to="/tags">
+              <Link activeClassName="is-active" className="navbar-item" to="/tags">
                 Projects
               </Link>
-              <Link className="navbar-item" to="/contact">
+              <Link activeClassName="is-active" className="navbar-item" to="/contact">
                 Contact
               </Link>
 
