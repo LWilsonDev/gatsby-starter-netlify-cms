@@ -2,7 +2,7 @@
 templateKey: index-page
 title: Patrick Johns
 image: /img/mic.jpg
-heading: Great coffee with a conscience
+heading: Patrick Johns Portfolio Site
 subheading: Producer - Presenter - Writer
 mainpitch:
   title: About Patrick
