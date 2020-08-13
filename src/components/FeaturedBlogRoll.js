@@ -56,7 +56,7 @@ class FeaturedBlogRoll extends React.Component {
                     <p>Tags:
                     {post.frontmatter.tags.map(tag => (
 
-                      <Link key={tag + `tag`} to={`/tags/${kebabCase(tag)}/`}> {tag} </Link>
+                      <Link key={tag + `tag`} to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                   ))}
                     </p>
                   </div>
